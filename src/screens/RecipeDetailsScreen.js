@@ -44,6 +44,50 @@ const RecipeDetailsScreen = ({ navigation, route }) => {
         <Text style={{ fontSize: 20, marginVertical: 16 }}>
           {item.description}{' '}
         </Text>
+
+        {/* Recipe Extra Details  */}
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+          <View
+            style={{
+              backgroundColor: 'rgba(255, 0, 0, 0.38)',
+              paddingHorizontal: 16,
+              paddingVertical: 20,
+              borderRadius: 8,
+              alignItems: 'center',
+            }}
+          >
+            <Text style={{ fontSize: 35 }}>⏰</Text>
+            <Text style={{ fontSize: 20, fontWeight: '400' }}>{item.time}</Text>
+          </View>
+          <View
+            style={{
+              backgroundColor: 'rgba(135, 206, 235, 0.8)',
+              paddingHorizontal: 16,
+              paddingVertical: 20,
+              borderRadius: 8,
+              alignItems: 'center',
+            }}
+          >
+            <Text style={{ fontSize: 35 }}>🥣</Text>
+            <Text style={{ fontSize: 20, fontWeight: '400' }}>
+              {item.difficulty}
+            </Text>
+          </View>
+          <View
+            style={{
+              backgroundColor: 'rgba(255, 165, 0, 0.48)',
+              paddingHorizontal: 16,
+              paddingVertical: 20,
+              borderRadius: 8,
+              alignItems: 'center',
+            }}
+          >
+            <Text style={{ fontSize: 35 }}>🔥</Text>
+            <Text style={{ fontSize: 20, fontWeight: '400' }}>
+              {item.calories}
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
   );
