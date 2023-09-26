@@ -54,10 +54,10 @@ To run the Food Recipe App locally on your machine, follow these steps:
  * Personalize the app by modifying the data in the constants.js file to include or update recipes.
 
 ## Screenshots
+![Welcom Screen](https://github.com/LaxmanZ/FoodRecipeApp-react-native/assets/126096100/716c3530-9ce4-4abb-9497-b95521a9f969)
 ![Home Screen](https://github.com/LaxmanZ/FoodRecipeApp-react-native/assets/126096100/36c9a53c-869a-4a5d-a660-66e2b66dd285)
 ![Recipe Details Screen](https://github.com/LaxmanZ/FoodRecipeApp-react-native/assets/126096100/4f10c486-233b-493a-b09f-1125eb2237cd)
 ![Recipe Details Screen2](https://github.com/LaxmanZ/FoodRecipeApp-react-native/assets/126096100/d93f292f-dfae-48c6-bd46-bf7f2f24985b)
-![Welcom Screen](https://github.com/LaxmanZ/FoodRecipeApp-react-native/assets/126096100/716c3530-9ce4-4abb-9497-b95521a9f969)
 
 Thank You....!
 
