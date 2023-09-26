@@ -21,7 +21,7 @@ const SearchFilter = ({ icon, placeHolder }) => {
       }}
     >
       <FontAwesome name={icon} size={20} color="#f96163" />
-      <TextInput style={{ paddingLeft: 8, fontSize: 16, color: "#808080" }}>
+      <TextInput style={{ paddingLeft: 8, fontSize: 16, color: '#808080' }}>
         {placeHolder}
       </TextInput>
     </View>
