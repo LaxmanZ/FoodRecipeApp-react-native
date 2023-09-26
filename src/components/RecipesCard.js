@@ -5,14 +5,17 @@ import { colors, recipeList } from '../Constant';
 import { Image } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { Pressable } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const RecipesCard = () => {
+  const navigation = useNavigation();
   return (
     <View>
       <FlatList
         data={recipeList}
         renderItem={({ item, index }) => (
           <Pressable
+            onPress={() => navigation.navigate('RecipeDetails', { item: item })}
             style={{
               backgroundColor: colors.COLOR_LIGHT,
               marginVertical: 16,
