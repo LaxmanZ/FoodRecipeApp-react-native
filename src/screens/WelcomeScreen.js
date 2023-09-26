@@ -3,7 +3,7 @@ import { TouchableOpacity } from 'react-native';
 import { Image } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native';
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({ navigation }) => {
   return (
     <View style={{ flex: 1, alignItems: 'center' }}>
       <Image
@@ -25,6 +25,7 @@ const WelcomeScreen = () => {
         Cook Like A Chef
       </Text>
       <TouchableOpacity
+        onPress={() => navigation.navigate('RecipeList')}
         style={{
           backgroundColor: '#f96163',
           borderRadius: 18,
