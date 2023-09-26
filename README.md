@@ -18,13 +18,9 @@ The Food Recipe App is a mobile application developed using React Native, design
 
 - **Extensive Recipe Database:** Access a vast collection of recipes, ranging from appetizers to desserts, categorized by cuisine and dietary preferences.
 
-- **Intelligent Search:** Quickly find recipes by name, ingredients, or dietary restrictions, making it easy to plan your meals.
-
 - **Detailed Recipe Information:** View detailed instructions, ingredient lists, cooking times, and nutritional information for each recipe.
 
 - **Favorite Recipes:** Save your favorite recipes to your profile for easy access.
-
-- **Create Your Recipes:** Share your culinary creations with the world by adding your own recipes to the app.
 
 
 ## Installation
@@ -51,9 +47,7 @@ To run the Food Recipe App locally on your machine, follow these steps:
 
 1. App Usage:
 * Browse through the extensive collection of recipes.
-* Utilize the search feature to find recipes by name, ingredients, or dietary preferences.
 * Select a recipe to view detailed information, including preparation steps and nutritional facts.
-* Mark your favorite recipes for quick access.
 * Share your culinary expertise by adding your own recipes to the app.
 
 2. Customization:
