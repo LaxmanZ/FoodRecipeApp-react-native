@@ -3,6 +3,7 @@ import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { Pressable } from 'react-native';
+import { ScrollView } from 'react-native';
 
 const RecipeDetailsScreen = ({ navigation, route }) => {
   const { item } = route.params;
@@ -41,52 +42,114 @@ const RecipeDetailsScreen = ({ navigation, route }) => {
           {item.name}
         </Text>
 
-        <Text style={{ fontSize: 20, marginVertical: 16 }}>
-          {item.description}{' '}
-        </Text>
+        <View style={{ flex: 1 }}>
+          <ScrollView showsVerticalScrollIndicator={false}>
+            <Text style={{ fontSize: 20, marginVertical: 16 }}>
+              {item.description}{' '}
+            </Text>
 
-        {/* Recipe Extra Details  */}
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
-          <View
-            style={{
-              backgroundColor: 'rgba(255, 0, 0, 0.38)',
-              paddingHorizontal: 16,
-              paddingVertical: 20,
-              borderRadius: 8,
-              alignItems: 'center',
-            }}
-          >
-            <Text style={{ fontSize: 35 }}>⏰</Text>
-            <Text style={{ fontSize: 20, fontWeight: '400' }}>{item.time}</Text>
-          </View>
-          <View
-            style={{
-              backgroundColor: 'rgba(135, 206, 235, 0.8)',
-              paddingHorizontal: 16,
-              paddingVertical: 20,
-              borderRadius: 8,
-              alignItems: 'center',
-            }}
-          >
-            <Text style={{ fontSize: 35 }}>🥣</Text>
-            <Text style={{ fontSize: 20, fontWeight: '400' }}>
-              {item.difficulty}
-            </Text>
-          </View>
-          <View
-            style={{
-              backgroundColor: 'rgba(255, 165, 0, 0.48)',
-              paddingHorizontal: 16,
-              paddingVertical: 20,
-              borderRadius: 8,
-              alignItems: 'center',
-            }}
-          >
-            <Text style={{ fontSize: 35 }}>🔥</Text>
-            <Text style={{ fontSize: 20, fontWeight: '400' }}>
-              {item.calories}
-            </Text>
-          </View>
+            {/* Recipe Extra Details  */}
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+              }}
+            >
+              <View
+                style={{
+                  backgroundColor: 'rgba(255, 0, 0, 0.38)',
+                  width: 100,
+                  paddingVertical: 20,
+                  borderRadius: 8,
+                  alignItems: 'center',
+                }}
+              >
+                <Text style={{ fontSize: 35 }}>⏰</Text>
+                <Text style={{ fontSize: 20, fontWeight: '400' }}>
+                  {item.time}
+                </Text>
+              </View>
+              <View
+                style={{
+                  backgroundColor: 'rgba(135, 206, 235, 0.8)',
+                  width: 100,
+                  paddingVertical: 20,
+                  borderRadius: 8,
+                  alignItems: 'center',
+                }}
+              >
+                <Text style={{ fontSize: 35 }}>🥣</Text>
+                <Text style={{ fontSize: 20, fontWeight: '400' }}>
+                  {item.difficulty}
+                </Text>
+              </View>
+              <View
+                style={{
+                  backgroundColor: 'rgba(255, 165, 0, 0.48)',
+                  width: 100,
+                  paddingVertical: 20,
+                  borderRadius: 8,
+                  alignItems: 'center',
+                }}
+              >
+                <Text style={{ fontSize: 35 }}>🔥</Text>
+                <Text style={{ fontSize: 20, fontWeight: '400' }}>
+                  {item.calories}
+                </Text>
+              </View>
+            </View>
+
+            {/* Recipe Ingredients  */}
+            <View style={{ marginVertical: 22, alignSelf: 'flex-start' }}>
+              <Text
+                style={{ fontSize: 22, fontWeight: '600', marginBottom: 6 }}
+              >
+                Ingredients:
+              </Text>
+
+              {item.ingredients.map((ingredient, index) => {
+                return (
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      marginVertical: 2,
+                    }}
+                    key={index}
+                  >
+                    <View
+                      style={{
+                        backgroundColor: 'red',
+                        height: 10,
+                        width: 10,
+                        borderRadius: 5,
+                      }}
+                    ></View>
+                    <Text style={{ fontSize: 18, marginLeft: 6 }}>
+                      {ingredient}
+                    </Text>
+                  </View>
+                );
+              })}
+            </View>
+            {/* Recipe Steps  */}
+            <View style={{ marginVertical: 22, alignSelf: 'flex-start' }}>
+              <Text
+                style={{ fontSize: 22, fontWeight: '600', marginBottom: 6 }}
+              >
+                Steps:
+              </Text>
+
+              {item.steps.map((step, index) => {
+                return (
+                  <Text
+                    key={index}
+                    style={{ fontSize: 18, marginLeft: 6, marginVertical: 4 }}
+                  >{`${index + 1} ) ${step}`}</Text>
+                );
+              })}
+            </View>
+          </ScrollView>
         </View>
       </View>
     </View>
