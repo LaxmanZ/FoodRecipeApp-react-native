@@ -23,6 +23,7 @@ const CategoriesFilter = () => {
                 shadowOpacity: 0.1,
                 shadowRadius: 7,
               }}
+              key={index}
             >
               <Text
                 key={index}

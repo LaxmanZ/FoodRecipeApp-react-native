@@ -28,6 +28,7 @@ const RecipesCard = () => {
               shadowOpacity: 0.1,
               shadowRadius: 7,
             }}
+            key={index}
           >
             <Image
               style={{ width: 150, height: 150, resizeMode: 'center' }}
