@@ -4,6 +4,7 @@ import AppNavigator from './src/navigation/AppNavigator';
 
 export default function App() {
   return <AppNavigator />;
+    
 }
 
 const styles = StyleSheet.create({
